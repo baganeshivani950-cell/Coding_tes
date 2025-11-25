@@ -61,5 +61,3 @@ This project fulfills all use cases defined in the Coding Exercise, including dy
 | State Persistence | localStorage |
 
 
-# Project Structure
-
