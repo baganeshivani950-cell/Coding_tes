@@ -1,0 +1,59 @@
+{
+  "sections": [
+    {
+      "id": "compliance",
+      "title": "Compliance Assessment",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "select",
+          "label": "Do you have SOC2 certification?",
+          "options": ["Yes", "No", "In Progress"],
+          "required": true,
+          "riskWeight": 4,
+          "conditional": null
+        },
+        {
+          "id": "q2",
+          "type": "file",
+          "label": "Upload compliance certificate",
+          "accept": ".pdf",
+          "maxSize": 10,
+          "required": false,
+          "riskWeight": 5,
+          "conditional": {
+            "questionId": "q1",
+            "answer": "Yes"
+          }
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Security & Insurance",
+      "questions": [
+        {
+          "id": "q3",
+          "type": "select",
+          "label": "Do you have cybersecurity insurance?",
+          "options": ["Yes", "No"],
+          "required": true,
+          "riskWeight": 6,
+          "conditional": null
+        },
+        {
+          "id": "q4",
+          "type": "text",
+          "label": "Please explain why you don't have insurance",
+          "required": false,
+          "charLimit": 500,
+          "riskWeight": 3,
+          "conditional": {
+            "questionId": "q3",
+            "answer": "No"
+          }
+        }
+      ]
+    }
+  ]
+}
